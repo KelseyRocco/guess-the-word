@@ -65,7 +65,7 @@ const validateInput = function (input) {
 const makeGuess = function (guess) {
   guess = guess.toUpperCase();
   if (guessedLetters.includes(guess)) {
-    message.innerText = "You already guessed that letter, silly. Try again.";
+    message.innerText = "You already guessed that letter.";
   } else {
     guessedLetters.push(guess);
     showGuessedLetters();
@@ -141,7 +141,7 @@ playAgainBtn.addEventListener("click", function () {
   guessedLetters = [];
   remainingGuesses = 8;
   getWord();
-  remainingGuessesSpan.innerText = `${remainingGuesses} remaining`;
+  remainingGuessesSpan.innerText = `${remainingGuesses} remaining!`;
   guessLetterBtn.classList.remove("hide");
   playAgainBtn.classList.add("hide");
   remainingGuessesElement.classList.remove("hide");
